@@ -1,0 +1,15 @@
+.btnc {
+  display: inline-block;
+  background: transparent;
+  color: #673f69;
+  padding: 1rem 2rem;
+  border: 1px solid #673f69;
+  font-weight: 500;
+  border-radius: 15px;
+}
+
+.btnc:hover {
+  background: #673f69;
+  color: white;
+  transition: all 300ms ease;
+}
