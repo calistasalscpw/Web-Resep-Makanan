@@ -24,16 +24,32 @@
     overflow: hidden;
 }
 
-.change-profil{
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #007bff;
+.change-profil {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translate(50%, 50%);
+    background-color: #FB6D48;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.change-profil i {
+    font-size: 30px;
 }
 
 .container{
     text-align: center;
+}
+
+.container-profil{
+    text-align: center;
+    position: relative;
+    display: inline-block;
 }
