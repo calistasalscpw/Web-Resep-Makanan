@@ -1,54 +1,77 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 .dropdown ul {
-    border-radius: 0px;
-    border-color: black;
-    width: 55%;
-    padding: 0;
+  border-radius: 0px;
+  border-color: black;
+  width: 55%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 0;
 }
 .dropdown-menu li {
-    background-color: #FFAF45;
+  background-color: #ffaf45;
 }
 .dropdown-menu li a {
-    color: white; 
-    text-align: center;
-    padding: 3% 5%;
-    font-size: 20px;
+  color: white;
+  text-align: center;
+  padding: 3% 5%;
+  font-size: 20px;
 }
 .dropdown-menu li a:hover {
-    background-color: #DA9438;
-    color: white; 
-    text-align: center;
-    padding: 3% 5%;
-    font-size: 20px;
+  background-color: #da9438;
+  color: white;
+  text-align: center;
+  padding: 3% 5%;
+  font-size: 20px;
 }
 .dropdown ul ul {
-    list-style-type:none;
-    display: none;
-    position: absolute;
-    top: 0%;
-    left: 100%;
-    height: 56.3vh;
-    width: 13vw;
-    border: 1px solid;
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  bottom: 0%;
+  left: 100%;
+  height: 100%;
+  width: 65%;
+  border: 1px solid;
 }
 .dropdown ul ul li {
-    text-align: center;
-    background-color: #FB6D48;
-    padding: 1.35vh 3vw;
+  text-align: center;
+  background-color: #fb6d48;
+  padding: 0.41rem 0.5rem;
 }
 .dropdown ul ul li a {
-    background-color: transparent;
-    text-decoration: none;
-    font-weight: 400;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: 400;
 }
-.dropdown ul ul li:hover{
-    background-color: #eb8a72;
+.dropdown ul ul li:hover {
+  background-color: #eb8a72;
 }
-.dropdown ul ul li a:hover{
-    background-color: transparent;
+.dropdown ul ul li a:hover {
+  background-color: transparent;
 }
 .dropdown-menu li:hover ul {
-    display: block;
-    box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.373);
+  display: block;
+  box-shadow: -5px 5px 8px rgba(0, 0, 0, 0.373);
+}
+
+.btnc {
+  display: inline-block;
+  background: transparent;
+  color: #673f69;
+  padding: 1rem 2rem;
+  border: 3px solid #673f69;
+  font-weight: 500;
+  border-radius: 15px;
+  font-size: 30px;
+}
+
+.btnc:hover {
+  background: #673f69;
+  color: white;
+  transition: all 300ms ease;
+}
+
+.container-alergens {
+  display: flex;
+  align-items: center;
 }
