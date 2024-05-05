@@ -15,7 +15,11 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <script src="bootstrap.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
 
     <!--Connect Bootstrap for Icon-->
     <link
@@ -64,14 +68,13 @@
   <body>
     <!--Navbar-->
     <nav
-      class="navbar navbar-expand-lg px-3 py-2 shadow"
-      style="background-color: #ffaf45"
+      class="navbar navbar-expand-lg"
+      style="background-color: #ffaf45; padding: 1% 0.5%"
     >
-      <!-- posisi navbar rada menjorok ke dalem atau gak -->
-      <div class="container-fluid">
-        <a class="navbar-brand" id="recipehome" href="#"
-          ><img src="Transparent Masakuy.png" alt="Company logo" width="100 px"
-        /></a>
+      <div class="container-fluid" style="margin-left: 0%">
+        <a class="navbar-brand" href="recipeUnfiltered.html" style="width: 7%">
+          <img src="iconPutih.png" alt="" style="width: 100%; height: 100%" />
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -83,38 +86,63 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="collapse navbar-collapse ms-4" id="navbarNav">
           <ul class="navbar-nav">
-            <li class="nav-item">
+            <li class="nav-item me-2">
               <a
                 class="nav-link active"
                 aria-current="page"
                 href="#"
-                id="navbar"
                 style="font-size: 20px"
                 >Recipe</a
               >
             </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#"
-                id="navbar"
-                style="color: white; font-size: 20px"
+            <li class="nav-item me-2">
+              <a class="nav-link" href="#" style="color: white; font-size: 20px"
                 >Article</a
               >
             </li>
-            <li class="nav-item">
-              <a
-                class="nav-link"
-                href="#"
-                id="navbar"
-                style="color: white; font-size: 20px"
-                >Category</a
-              >
-            </li>
           </ul>
+          <div class="dropdown" style="width: 71%">
+            <a
+              class="btn text-white fw-semibold"
+              style="font-size: 20px; border: none"
+              href="#"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <span style="margin-right: 0.5vw">Category</span>
+              <span
+                ><i class="bi bi-caret-down-fill" style="font-size: 20px"></i
+              ></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">Breakfast</a>
+                <ul>
+                  <li><a href="">Meat</a></li>
+                  <li><a href="">Seafood</a></li>
+                  <li><a href="">Mushroom</a></li>
+                  <li><a href="">Vegetables</a></li>
+                  <li><a href="">Egg</a></li>
+                  <li><a href="">Noodles</a></li>
+                  <li><a href="">Tofu</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#">Lunch</a></li>
+              <li><a class="dropdown-item" href="#">Dinner</a></li>
+              <li><a class="dropdown-item" href="#">Dessert</a></li>
+              <li><a class="dropdown-item" href="#">Snack</a></li>
+              <li><a class="dropdown-item" href="#">Traditional Food</a></li>
+              <li><a class="dropdown-item" href="#">International Food</a></li>
+            </ul>
+          </div>
         </div>
+        <a href="profil.html" class="d-flex justify-content-end me-4 pe-2">
+          <img src="profil.png" alt="" style="width: 13%; height: 13%" />
+          <!-- <img src="images/profil.png" alt="" style="width: 5vw; height: 10vh;"> -->
+        </a>
       </div>
     </nav>
     <!--End navbar-->
@@ -132,17 +160,74 @@
           />
         </div>
         <div class="col">
-          <h3>
-            Delicious Healthy Home-made Salad Recipe For Dormitory Students
-          </h3>
+          <strong>
+            <h3>
+              Delicious Healthy Home-made Salad Recipe For Dormitory Students
+            </h3>
+          </strong>
+
+          <!--Alergens-->
+          <!--class="row"-->
+          <div class="container-alergens">
+            <img
+              src="milk-box.png"
+              alt="alergen-milk"
+              height="30px"
+              style="margin-right: 10px"
+            />
+            <i
+              class="bi bi-egg-fried"
+              style="font-size: 30px; margin-right: 10px"
+            ></i>
+            <img
+              src="indonesia.png"
+              alt="indonesia Category"
+              height="30px"
+              style="
+                border-radius: 60%;
+                border: 2px solid #121212;
+                margin-right: 10px;
+              "
+            />
+          </div>
+          <!--End Alergens and Category-->
+
+          <!--Servings and time-->
+          <div class="row" style="margin-top: 1rem">
+            <div class="col">
+              <div
+                class="container border border-dark rounded"
+                id="serving-time"
+                style="padding: 1rem"
+              >
+                <i class="bi bi-stopwatch" style="margin-right: 1rem"></i>
+                30 minutes
+              </div>
+            </div>
+
+            <div class="col">
+              <div
+                class="container border border-dark rounded"
+                id="servings"
+                style="padding: 1rem"
+              >
+                <i class="bi bi-person" style="margin-right: 1rem"></i>
+                3 servings
+              </div>
+            </div>
+          </div>
+          <!--End Servings and time-->
+
+          <!--Button Save Recipe-->
           <button
             type="button"
             class="btnc btn-outline-primary"
-            style="margin-top: 5%"
+            style="margin-top: 10%"
           >
-            <i class="bi bi-bookmark"></i>
+            <i class="bi bi-bookmark" style="margin-right: 1rem"></i>
             Save Recipe
           </button>
+          <!--End Button-->
         </div>
       </div>
 
@@ -196,8 +281,11 @@
     <footer class="text-black pt-4 pb-4" style="background-color: #ffaf45">
       <div class="container-fluid text-center">
         <div class="row text-center">
-          <div class="col-3">Masakuy</div>
-          <div class="col-6 d-flex justify-content-evenly">
+          <div class="col-3" style="font-size: 25px">Masakuy</div>
+          <div
+            class="col-6 d-flex justify-content-evenly"
+            style="padding-top: 0.5rem"
+          >
             <a
               href="#"
               class="link-offset-2 link-underline link-underline-opacity-0 text-black"
@@ -209,15 +297,24 @@
               >Recipe</a
             >
             <a
-              href="#"
+              href="articles.html"
               class="link-offset-2 link-underline link-underline-opacity-0 text-black"
               >Article</a
             >
           </div>
           <div class="col-3">
-            <i class="bi bi-whatsapp"></i>
-            <i class="bi bi-instagram"></i>
-            <i class="bi bi-twitter-x"></i>
+            <i
+              class="bi bi-whatsapp"
+              style="font-size: 28px; margin-right: 10px"
+            ></i>
+            <i
+              class="bi bi-instagram"
+              style="font-size: 28px; margin-right: 10px"
+            ></i>
+            <i
+              class="bi bi-twitter-x"
+              style="font-size: 28px; margin-right: 10px"
+            ></i>
           </div>
         </div>
       </div>
