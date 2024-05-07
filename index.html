@@ -19,10 +19,12 @@
         font-weight: 600;
         font-style: normal;
       }
+        
+      a {text-decoration:none;}
     </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #ffaf45; padding: 1% 0.5%">
+    <nav id="navbar" class="navbar navbar-expand-lg" style="background-color: #ffaf45; padding: 1% 0.5%">
       <div class="container-fluid" style="margin-left: 0%">
         <a class="navbar-brand" href="recipeUnfiltered.html" style="width: 7%">
           <img src="assets/img/iconPutih.png" alt="" style="width: 100%; height: 100%" />
@@ -138,11 +140,12 @@
               </li>
             </ul>
           </div>
-        </div>
+            
+      </div>
         <a href="profil.html" class="d-flex justify-content-end me-4 pe-2">
           <img src="assets/img/profil.png" alt="" style="width: 13%; height: 13%" />
-          <!-- <img src="assets/img/profil.png" alt="" style="width: 5vw; height: 10vh;"> -->
         </a>
+          
       </div>
     </nav>
 
@@ -308,5 +311,23 @@
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      
+     <script>
+        function isLoggedIn() {
+            return true;
+        }
+
+        window.onload = function() {
+            var loginStatus = isLoggedIn();
+            var navbarEnd = document.querySelector('.d-flex.justify-content-end.me-4.pe-2');
+
+            if (loginStatus) {
+            navbarEnd.innerHTML = '<a/> <img href="profil.html" src="assets/img/profil.png" width="80" height="80" /> </a>';
+            } else {
+            navbarEnd.innerHTML = '<a href="login.html" role="button" class="btn" style="background-color: #D74B76; color: #ffffff;" style="text-decoration:none;">Sign In</a>';
+            }
+  }
+</script>
+      
   </body>
 </html>
