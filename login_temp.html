@@ -15,31 +15,33 @@
 </head>
 
 <body style="font-family: Poppins, sans-serif;">
-
-    <div class="card" style="border-radius: 8px;">
+    <div class="card">
         <div class="card-body text-center d-flex flex-column align-items-center" style="border-style: none;"><img class="mb-4" src="assets/img/illustrations/iconColor.png" style="max-height: 200px;max-width: 250px;margin-top: 60px;">
-            <div class="card mb-3" style="max-width: 650px;">
+            <div class="card mb-3" style="max-width: 650px; border-radius: 1em; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);">
                 <div class="row g-0">
-                  <div class="col-md-8" style="background-color: #f6ae48; color: #ffffff; width: 20em; height: 30em;">
-                    <p style="font-size: 2em; font-weight: bold;">Hi! Good To See You</p>
-                    <p style="">Time To Make A Delicious Food</p>
+                  <div class="col-md-8" style="background-color: #f6ae48; color: #ffffff; width: 20em; height: 30em; border-radius: 1em; z-index: 9;">
+                    <p style="font-size: 1.5em; font-weight: bold; margin-top: 2em; margin-bottom: 0;">Hi! Good To See You</p>
+                    <p style="font-size: 0.8em;">Time To Make A Delicious Food</p>
                     <form class="d-flex flex-column" method="post" data-bs-theme="light" style="width: 300px;max-width: none; margin: auto;">
-                        <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Email or Username" style="background-color: #E29D3D; border: none; margin-top: 3em;"></div>
+                        <div class="mb-3"><input class="form-control" type="text" name="email" placeholder="Email or Username" style="background-color: #E29D3D; border: none; margin-top: 2em;"></div>
                         <div class="mb-4"><input class="form-control" type="password" name="password" placeholder="Password"style="background-color: #E29D3D; border: none;"></div>
                         <div class="input-group mb-3">
-                            <div class="input-group">
-                              <input class="form-check-input mt-0" type="checkbox" label="Remember Me">
+                            <div class="input-group" style="margin-bottom: 10%;">
+                              <input type="checkbox" id="remember"> 
+                                <label for="remember" style="margin-left: 0.2em; font-size: 0.9em;">Remember me</label>
+                                <a class="" style="text-decoration: none; color: #ffffff; font-size: 0.9em; margin-left: 3em;" href="recovery.html">Forgot password?</a>
                             </div>
-                          </div>
-                        <div class="mb-4"><button class="btn shadow d-block w-100" type="submit" style="color: #ffffff;background: #FB6D48;">Log in</button></div>
-                    </form>
+                        </div>
+                        <div class="mb-4"><button class="btn shadow d-block w-100" type="submit" style="color: #ffffff;background: #FB6D48; font-weight: 800;">Login</button></div>
+                        <p style="font-size: 0.8em;">Don't have any account? Sign Up <a href="register.html" style=" font: size 0.8em; text-decoration: none; font-weight: 600; color: #ffffff;">here</a></p>
+                      </form>
                   </div>
-                  <div class="col-md-4">
-                    <img src="assets/img/food.png" class="img-fluid rounded-start" style="max-width: 300px;">
+                  <div class="col" style="position: relative; right: 1em; max-width: 100%;">
+                    <img src="assets/img/food.png" class="img-fluid food-image" style="height: 30em; z-index: 8;">
                   </div>
                 </div>
               </div>
-            <a class="text-muted">Forgot your password?</a>
+
         </div>
     </div>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
