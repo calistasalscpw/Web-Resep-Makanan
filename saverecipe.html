@@ -1,3 +1,9 @@
+<?php
+    include "connect.php";
+
+    $process = mysqli_query($connection, "SELECT * FROM recipe_detail") or die (mysqli_error($connection));
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -274,6 +280,7 @@
         </nav>
         <!--End navbar-->
 
+
         <!--#TODO-->
 
         <!--Start Recipe Title and Save Button-->
@@ -291,44 +298,33 @@
 
           <div class="row">
             <div class="col">
+
+            <?php
+                  while($data = mysqli_fetch_assoc($process)){
+            ?>
+
               <img
-                src="https://asset.kompas.com/crops/Ov2ISFz6bQd9uvlAJ_Becbtm3yc=/2x0:1000x665/750x500/data/photo/2021/08/31/612dece2b2de9.jpg"
+                src="<?php echo $data['photo'] ?>"
                 alt="Salad"
                 width="90%"
                 class="rounded"
               />
+
             </div>
             <div class="col">
               <strong>
                 <h3 style="font-weight: 600">
-                  Delicious Healthy Home-made Salad Recipe For Dormitory
-                  Students
+                  <?php echo $data ['title_recipe'] ?>
                 </h3>
               </strong>
 
               <!--Alergens-->
               <!--class="row"-->
               <div class="container-alergens">
-                <img
-                  src="assets/img/milk-box.png"
-                  alt="alergen-milk"
-                  height="30px"
-                  style="margin-right: 10px"
-                />
-                <i
-                  class="bi bi-egg-fried"
-                  style="font-size: 30px; margin-right: 10px"
-                ></i>
-                <img
-                  src="assets/img/indonesia.png"
-                  alt="indonesia Category"
-                  height="30px"
-                  style="
-                    border-radius: 60%;
-                    border: 2px solid #121212;
-                    margin-right: 10px;
-                  "
-                />
+                <div class="contains">
+                  <span id="milk"><?php echo $data ['category'] ?></span>
+                  <span id="local"><?php echo $data ['category_region'] ?></span>
+                </div>
               </div>
               <!--End Alergens and Category-->
 
@@ -341,7 +337,7 @@
                     style="padding: 1rem"
                   >
                     <i class="bi bi-stopwatch" style="margin-right: 1rem"></i>
-                    30 minutes
+                    <?php echo $data ['time'] ?> minutes
                   </div>
                 </div>
 
@@ -352,7 +348,7 @@
                     style="padding: 1rem"
                   >
                     <i class="bi bi-person" style="margin-right: 1rem"></i>
-                    3 servings
+                    <?php echo $data ['serving'] ?> servings
                   </div>
                 </div>
               </div>
@@ -360,14 +356,41 @@
 
               <!--Button Save Recipe-->
               <button
-                type="button"
-                class="btnc btn-outline-primary"
-                style="margin-top: 10%"
-              >
-                <i class="bi bi-bookmark" style="margin-right: 1rem"></i>
-                Save Recipe
+                    type="button"
+                    class="btnc btn-outline-primary"
+                    style="margin-top: 2rem"
+                  >
+                <!--<div class="content">-->
+                  <i class="bi bi-bookmark" style="margin-right: 1rem"></i>
+                  <span class="btnc-text">Save Recipe</span>
+                <!--</div>-->
               </button>
               <!--End Button-->
+
+              <!--Script Save Button-->
+              <script>
+
+                  let btnc = document.querySelector(".btnc");
+
+                  btnc.addEventListener("click" , ()=> {
+                    let icon = btnc.querySelector("i");
+                    let buttonText = btnc.querySelector("span");
+
+                    if (icon.classList.contains("bi-bookmark")){
+                      //if the button is currently in "Save" state
+                      icon.classList.replace("bi-bookmark", "bi-bookmark-fill");
+                      buttonText.innerText = "Saved Recipe";
+                    } else {
+                      //if the button is currently in "Saved" state
+                      icon.classList.replace("bi-bookmark-fill", "bi-bookmark");
+                      buttonText.innerText = "Save Recipe";
+                    }
+                    
+                  });
+
+              </script>
+              <!--End Script Save Button-->
+
             </div>
           </div>
 
@@ -378,19 +401,10 @@
                 id="ingredients"
                 style="padding: 1rem"
               >
+
                 <h4>Ingredients:</h4>
                 <ul>
-                  <li>150 gr pineapple, cut into cubes</li>
-                  <li>100 gr papaya, cut into cubes</li>
-                  <li>150 gr melon, cut into cubes</li>
-                  <li>100 gr grapes</li>
-                </ul>
-
-                <p>Ingredients for yoghurt:</p>
-                <ul>
-                  <li>125 gr strawberry yoghurt</li>
-                  <li>50 gr strawberry, chopped</li>
-                  <li>2 tbsp mayonnaise</li>
+                  <?php echo $data['ingredients'] ?>
                 </ul>
               </div>
             </div>
@@ -402,15 +416,13 @@
               >
                 <h4>Steps:</h4>
                 <ol>
-                  <li>
-                    Make yoghurt sauce, mix all the sauce ingredients together,
-                    set aside.
-                  </li>
-                  <li>
-                    Arrange the fruit pieces in serving bowls, drizzle with
-                    yoghurt sauce when serving.
-                  </li>
+                  <?php echo $data['steps'] ?>
                 </ol>
+
+                <?php
+                  }
+                ?>
+
               </div>
             </div>
           </div>
