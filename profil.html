@@ -47,7 +47,7 @@
         <div class="collapse navbar-collapse ms-4" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item me-2">
-              <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px">Recipe</a>
+              <a class="nav-link" href="#" style="color: white; font-size: 20px;">Recipe</a>
             </li>
             <li class="nav-item me-2">
               <a class="nav-link" href="#" style="color: white; font-size: 20px">Article</a>
@@ -174,14 +174,21 @@
     <div class="container" id="profil-part" style="margin-top: 4%;">
       <div class="container-profil">
         <img class="circle-profil"
-          src="assets/profil/profil.png" alt="profil anda">
-        <button class="change-profil" onclick=""><i class="bi bi-pencil"></i></button>
+          src="assets/img/profil.png" alt="profil anda">
+        <button class="change-profil" onclick="navigateToEdit()"><i class="bi bi-pencil"></i></button>
       </div>
       <div class="col" style="margin-top: 2.5%;">
         <h2>Masakuyy</h2>
         <h4>masakuyy@masak.com</h4>
       </div>
     </div>
+
+    <script>
+      function navigateToEdit() {
+        // Change 'otherpage.html' to the URL of the page you want to navigate to
+        window.location.href = 'edit-profil.html';
+      }
+      </script>
 
     <!-- Line Boundary -->
     <div class="line" style="margin-left: 5%; margin-right: 5%; margin-top: 4%;"></div>
