@@ -159,13 +159,13 @@
           <form class="col" method="get post" style="width: auto;">
             <div class="mb-3">
               <label for="name" style="font-size: 12pt;">Name</label>
-              <input class="form-control" type="text" name="name" placeholder="Rivandi Ignasius" style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 2em;"></div>
+              <input class="form-control" type="text" name="name" value="Rivandi Ignasius" style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 2em;"></div>
             <div class="mb-3">
               <label for="email" style="font-size: 12pt;">Email</label>
-              <input class="form-control" type="email" name="email" placeholder="rivandi@gmail.com" style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 3em;"></div>
+              <input class="form-control" type="email" name="email" value="rivandi@gmail.com" style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 3em;"></div>
             <div class="mb-4">
               <label for="password" style="font-size: 12pt;">Password</label>
-              <input class="form-control" type="password" name="password" placeholder="***" style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 3em;"></div>
+              <input class="form-control" type="password" name="password" value="*****" style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 3em;"></div>
             <div class="row" style="align-items: end;">
               <button class="btn shadow w-100" type="button" style="width: 100px; color: black; background-color: white; border-color: black; border-radius: 3px; font-weight: 800; visibility: hidden;">Cancel</button>
               <button class="btn shadow w-100" type="submit" style="width: 100px; color: black; background-color: #ffaf45; font-weight: 800;">Saved Changes</button>

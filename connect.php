@@ -7,6 +7,6 @@
     $connection = mysqli_connect($hostname, $userDataBase, $passwordUser, $databaseName) or die(mysqli_error());
 
     //if ($connection){
-    //    echo "Berhasil Koneksi";
+        //echo "Berhasil Koneksi";
     //} else echo "Gagal koneksi";
 ?>

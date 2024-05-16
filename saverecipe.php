@@ -210,8 +210,8 @@
             </ul>
           </div>
         </div>
-        <a href="profil.html" class="d-flex justify-content-end me-4 pe-2">
-          <img
+        <a href="profil.php" class="d-flex justify-content-end me-4 pe-2">
+          <img              
             src="assets/img/profil.png"
             alt=""
             style="width: 13%; height: 13%"
