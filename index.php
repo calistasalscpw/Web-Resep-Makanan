@@ -53,94 +53,94 @@
             </a>
             <ul class="dropdown-menu">
               <li>
-                <button class="dropdown-item" id="category" value="Breakfast">Breakfast</button>
+                <a style="color: white" class="dropdown-item" id="category" value="Breakfast">Breakfast</a>
                 <ul>
-                  <li><button id="ingredient" value="Meat">Meat</button></li>
-                  <li><button id="ingredient" value="Seafood">Seafood</button></li>
-                  <li><button id="ingredient" value="Mushroom">Mushroom</button></li>
-                  <li><button id="ingredient" value="Vegetables">Vegetables</button></li>
-                  <li><button id="ingredient" value="Egg">Egg</button></li>
-                  <li><button id="ingredient" value="Noodles">Noodles</button></li>
-                  <li><button id="ingredient" value="Tofu">Tofu</button></li>
-                  <li><button id="ingredient" value="Chicken">Chicken Meat</button></li>
+                  <li><a id="ingredient" style="color: white" value="Meat">Meat</a></li>
+                  <li><a id="ingredient" style="color: white" value="Seafood">Seafood</a></li>
+                  <li><a id="ingredient" style="color: white" value="Mushroom">Mushroom</a></li>
+                  <li><a id="ingredient" style="color: white" value="Vegetables">Vegetables</a></li>
+                  <li><a id="ingredient" style="color: white" value="Egg">Egg</a></li>
+                  <li><a id="ingredient" style="color: white" value="Noodles">Noodles</a></li>
+                  <li><a id="ingredient" style="color: white" value="Tofu">Tofu</a></li>
+                  <li><a id="ingredient" style="color: white" value="Chicken">Chicken Meat</a></li>
                 </ul>
               </li>
               <li>
-                <button class="dropdown-item" id="category" value="Lunch">Lunch</button>
+                <a style="color: white" class="dropdown-item" id="category" value="Lunch">Lunch</a>
                 <ul>
-                  <li><button id="ingredient" value="Meat">Meat</button></li>
-                  <li><button id="ingredient" value="Seafood">Seafood</button></li>
-                  <li><button id="ingredient" value="Mushroom">Mushroom</button></li>
-                  <li><button id="ingredient" value="Vegetables">Vegetables</button></li>
-                  <li><button id="ingredient" value="Egg">Egg</button></li>
-                  <li><button id="ingredient" value="Noodles">Noodles</button></li>
-                  <li><button id="ingredient" value="Tofu">Tofu</button></li>
-                  <li><button id="ingredient" value="Chicken">Chicken Meat</button></li>
+                  <li><a style="color: white" id="ingredient" value="Meat">Meat</a></li>
+                  <li><a style="color: white" id="ingredient" value="Seafood">Seafood</a></li>
+                  <li><a style="color: white" id="ingredient" value="Mushroom">Mushroom</a></li>
+                  <li><a style="color: white" id="ingredient" value="Vegetables">Vegetables</a></li>
+                  <li><a style="color: white" id="ingredient" value="Egg">Egg</a></li>
+                  <li><a style="color: white" id="ingredient" value="Noodles">Noodles</a></li>
+                  <li><a style="color: white" id="ingredient" value="Tofu">Tofu</a></li>
+                  <li><a style="color: white" id="ingredient" value="Chicken">Chicken Meat</a></li>
                 </ul>
               </li>
               <li>
-                <button class="dropdown-item" id="category" value="Dinner">Dinner</button>
+                <a style="color: white" class="dropdown-item" id="category" value="Dinner">Dinner</a>
                 <ul>
-                  <li><button id="ingredient" value="Meat">Meat</button></li>
-                  <li><button id="ingredient" value="Seafood">Seafood</button></li>
-                  <li><button id="ingredient" value="Mushroom">Mushroom</button></li>
-                  <li><button id="ingredient" value="Vegetables">Vegetables</button></li>
-                  <li><button id="ingredient" value="Egg">Egg</button></li>
-                  <li><button id="ingredient" value="Noodles">Noodles</button></li>
-                  <li><button id="ingredient" value="Tofu">Tofu</button></li>
-                  <li><button id="ingredient" value="Chicken">Chicken Meat</button></li>
+                  <li><a style="color: white" id="ingredient" value="Meat">Meat</a></li>
+                  <li><a style="color: white" id="ingredient" value="Seafood">Seafood</a></li>
+                  <li><a style="color: white" id="ingredient" value="Mushroom">Mushroom</a></li>
+                  <li><a style="color: white" id="ingredient" value="Vegetables">Vegetables</a></li>
+                  <li><a style="color: white" id="ingredient" value="Egg">Egg</a></li>
+                  <li><a style="color: white" id="ingredient" value="Noodles">Noodles</a></li>
+                  <li><a style="color: white" id="ingredient" value="Tofu">Tofu</a></li>
+                  <li><a style="color: white" id="ingredient" value="Chicken">Chicken Meat</a></li>
                 </ul>
               </li>
               <li>
-                <button class="dropdown-item" id="category" value="Dessert">Dessert</button>
+                <a style="color: white" class="dropdown-item" id="category" value="Dessert">Dessert</a>
                 <ul>
-                  <li><button id="ingredient" value="Milk">Milk</button></li>
-                  <li><button id="ingredient" value="Fruit">Fruit</button></li>
-                  <li><button id="ingredient" value="Chocolate">Chocolate</button></li>
-                  <li><button id="ingredient" value="Jelly">Jelly</button></li>
-                  <li><button id="ingredient" value="Yogurt">Yogurt</button></li>
-                  <li><button id="ingredient" value="Biscuit">Biscuit</button></li>
-                  <li><button id="ingredient" value="Cheese">Cheese</button></li>
-                  <li><button id="ingredient" value="Flour">Flour</button></li>
+                  <li><a style="color: white" id="ingredient" value="Milk">Milk</a></li>
+                  <li><a style="color: white" id="ingredient" value="Fruit">Fruit</a></li>
+                  <li><a style="color: white" id="ingredient" value="Chocolate">Chocolate</a></li>
+                  <li><a style="color: white" id="ingredient" value="Jelly">Jelly</a></li>
+                  <li><a style="color: white" id="ingredient" value="Yogurt">Yogurt</a></li>
+                  <li><a style="color: white" id="ingredient" value="Biscuit">Biscuit</a></li>
+                  <li><a style="color: white" id="ingredient" value="Cheese">Cheese</a></li>
+                  <li><a style="color: white" id="ingredient" value="Flour">Flour</a></li>
                 </ul>
               </li>
               <li>
-                <button class="dropdown-item" id="category" value="Snack">Snack</button>
+                <a style="color: white" class="dropdown-item" id="category" value="Snack">Snack</a>
                 <ul>
-                  <li><button id="ingredient" value="Meat">Meat</button></li>
-                  <li><button id="ingredient" value="Seafood">Seafood</button></li>
-                  <li><button id="ingredient" value="Mushroom">Mushroom</button></li>
-                  <li><button id="ingredient" value="Vegetables">Vegetables</button></li>
-                  <li><button id="ingredient" value="Egg">Egg</button></li>
-                  <li><button id="ingredient" value="Noodles">Noodles</button></li>
-                  <li><button id="ingredient" value="Tofu">Tofu</button></li>
-                  <li><button id="ingredient" value="Chicken">Chicken Meat</button></li>
+                  <li><a style="color: white" id="ingredient" value="Meat">Meat</a></li>
+                  <li><a style="color: white" id="ingredient" value="Seafood">Seafood</a></li>
+                  <li><a style="color: white" id="ingredient" value="Mushroom">Mushroom</a></li>
+                  <li><a style="color: white" id="ingredient" value="Vegetables">Vegetables</a></li>
+                  <li><a style="color: white" id="ingredient" value="Egg">Egg</a></li>
+                  <li><a style="color: white" id="ingredient" value="Noodles">Noodles</a></li>
+                  <li><a style="color: white" id="ingredient" value="Tofu">Tofu</a></li>
+                  <li><a style="color: white" id="ingredient" value="Chicken">Chicken Meat</a></li>
                 </ul>
               </li>
               <li>
-                <button class="dropdown-item" id="category" value="Local">Traditional Food</button>
+                <a style="color: white" class="dropdown-item" id="category" value="Local">Traditional Food</a>
                 <ul>
-                  <li><button id="ingredient" value="Meat">Meat</button></li>
-                  <li><button id="ingredient" value="Seafood">Seafood</button></li>
-                  <li><button id="ingredient" value="Mushroom">Mushroom</button></li>
-                  <li><button id="ingredient" value="Vegetables">Vegetables</button></li>
-                  <li><button id="ingredient" value="Egg">Egg</button></li>
-                  <li><button id="ingredient" value="Noodles">Noodles</button></li>
-                  <li><button id="ingredient" value="Tofu">Tofu</button></li>
-                  <li><button id="ingredient" value="Chicken">Chicken Meat</button></li>
+                  <li><a style="color: white" id="ingredient" value="Meat">Meat</a></li>
+                  <li><a style="color: white" id="ingredient" value="Seafood">Seafood</a></li>
+                  <li><a style="color: white" id="ingredient" value="Mushroom">Mushroom</a></li>
+                  <li><a style="color: white" id="ingredient" value="Vegetables">Vegetables</a></li>
+                  <li><a style="color: white" id="ingredient" value="Egg">Egg</a></li>
+                  <li><a style="color: white" id="ingredient" value="Noodles">Noodles</a></li>
+                  <li><a style="color: white" id="ingredient" value="Tofu">Tofu</a></li>
+                  <li><a style="color: white" id="ingredient" value="Chicken">Chicken Meat</a></li>
                 </ul>
               </li>
               <li>
-                <button class="dropdown-item" id="category" value="International">International Food</button>
+                <a style="color: white" class="dropdown-item" id="category" value="International">International Food</a>
                 <ul>
-                  <li><button id="ingredient" value="Meat">Meat</button></li>
-                  <li><button id="ingredient" value="Seafood">Seafood</button></li>
-                  <li><button id="ingredient" value="Mushroom">Mushroom</button></li>
-                  <li><button id="ingredient" value="Vegetables">Vegetables</button></li>
-                  <li><button id="ingredient" value="Egg">Egg</button></li>
-                  <li><button id="ingredient" value="Noodles">Noodles</button></li>
-                  <li><button id="ingredient" value="Tofu">Tofu</button></li>
-                  <li><button id="ingredient" value="Chicken">Chicken Meat</button></li>
+                  <li><a style="color: white" id="ingredient" value="Meat">Meat</a></li>
+                  <li><a style="color: white" id="ingredient" value="Seafood">Seafood</a></li>
+                  <li><a style="color: white" id="ingredient" value="Mushroom">Mushroom</a></li>
+                  <li><a style="color: white" id="ingredient" value="Vegetables">Vegetables</a></li>
+                  <li><a style="color: white" id="ingredient" value="Egg">Egg</a></li>
+                  <li><a style="color: white" id="ingredient" value="Noodles">Noodles</a></li>
+                  <li><a style="color: white" id="ingredient" value="Tofu">Tofu</a></li>
+                  <li><a style="color: white" id="ingredient" value="Chicken">Chicken Meat</a></li>
                 </ul>
               </li>
             </ul>
@@ -198,6 +198,56 @@
       ?>    
       </div>
     </div>
+
+    <script>
+      // di video nama filenya adalah script.js
+      let category = document.querySelector("#category");
+      let ingredient = document.querySelector("#ingredient");
+      let container = document.querySelector(".mb-3");
+
+      category.addEventListener("change", function(){
+          let foodCategory = this.value;
+          let selectedIngredient = ingredient.value;
+
+          let http = new XMLHttpRequest();
+
+          http.onload = function(){
+              if(this.readyState == 4 && this.status == 200){
+                  let response = JSON.parse(this.responseText);
+                  let out = "";
+                  for(let item of response){
+                      out += `
+                          <div class="col-4 mb-5">
+                              <div class="card" style="width: 25.8rem; border: none">
+                                  <img src="${item.photo}" class="card-img-top" alt="" style="border-style: solid; border-radius: 15px; border-width: 2px; height: 12rem;"/> <!-- ambil gambar dari database -->
+                                  <div class="card-body px-0 py-1">
+                                      <div class="d-flex justify-content-between">
+                                          <span class="badge rounded-pill" style="background-color: #FB6D48; font-size: 15px; font-weight: 400;">
+                                              <i class="bi bi-stopwatch" style="font-size: 20px;"></i> ${item.time} minutes<!-- ambil kolom dari tabel -->
+                                          </span>
+                                          <span class="badge rounded-pill" style="background-color: #FB6D48; font-size: 15px; font-weight: 400;">
+                                              <i class="bi bi-person" style="font-size: 20px;"></i> ${item.serving} servings<!-- ambil kolom dari tabel -->
+                                          </span>
+                                      </div>
+                                      <a href="saverecipe.html" class="card-title stretched-link" style="font-size: 20px; font-weight: 600;">${item.title_recipe}</a><!-- ambil kolom dari tabel -->
+                                  </div>
+                              </div>
+                          </div>
+                      `;
+                  }
+                  container.innerHTML = out;
+              }
+          }
+
+          http.open('POST', "script.php");
+          http.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+          http.send("category="+foodCategory+"&ingredient="+selectedIngredient);
+      });
+
+      // tonton video di menit 7.59
+    </script>
+
+
 
 
     <footer class="text-black pt-4 pb-4" style="background-color: #ffaf45;">
