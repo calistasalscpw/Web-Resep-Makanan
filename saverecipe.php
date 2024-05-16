@@ -262,8 +262,8 @@
           <!--class="row"-->
           <div class="container-alergens">
             <div class="contains">
-              <span id="milk"><?php echo $data ['category'] ?></span>
-              <span id="local"><?php echo $data ['category_region'] ?></span>
+              <span id="milk"><?php echo $data ['category_ingredient'] ?></span>
+              <span id="local"><?php echo $data ['category'] ?></span>
             </div>
           </div>
           <!--End Alergens and Category-->
