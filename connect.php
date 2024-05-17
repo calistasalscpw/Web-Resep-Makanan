@@ -1,12 +1,19 @@
 <?php
-    $hostname = "localhost";
-    $userDataBase = "root";
-    $passwordUser = "";
-    $databaseName = "masakuy";
 
-    $connection = mysqli_connect($hostname, $userDataBase, $passwordUser, $databaseName) or die(mysqli_error());
+$host = "localhost";
+$dbname = "masakuy";
+$username = "root";
+$password = "";
 
-    //if ($connection){
-        //echo "Berhasil Koneksi";
-    //} else echo "Gagal koneksi";
-?>
+$mysqli = new mysqli(hostname: $host,
+                     username: $username,
+                     password: $password,
+                     database: $dbname);
+                     
+$connection = mysqli_connect($host, $username, $password, $dbname) or die(mysqli_error());
+
+if ($mysqli->connect_errno) {
+    die("Connection error: " . $mysqli->connect_error);
+}
+
+return $mysqli;

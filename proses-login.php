@@ -1,13 +1,13 @@
 <?php
-include "database.php";
+include "connect.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Ambil nilai dari form
-    $email_or_username = $_POST['email-or-username'];
+    $email_or_username = $_POST['email'];
     $password = $_POST['password'];
 
     // Lakukan query untuk mencari pengguna dengan email atau username yang cocok
-    $query = "SELECT * FROM Users WHERE (email = '$email_or_username' OR username = '$email_or_username') AND password = '$password'";
+    $query = "SELECT * FROM Users WHERE (email = '$email_or_username') AND password = '$password'";
     $result = mysqli_query($koneksi, $query);
 
     if (mysqli_num_rows($result) == 1) {

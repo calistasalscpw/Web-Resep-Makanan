@@ -8,7 +8,7 @@ $token_hash = hash("sha256", $token);
 
 $expiry = date("Y-m-d H:i:s", time() + 60 * 30);
 
-$mysqli = require __DIR__ . "/database.php";
+$mysqli = require __DIR__ . "/connect.php";
 
 $sql = "UPDATE user
         SET reset_token_hash = ?,
@@ -30,7 +30,7 @@ if ($mysqli->affected_rows) {
     $mail->Subject = "Password Reset";
     $mail->Body = <<<END
 
-    Click <a href="http://localhost/manpro/php-password-reset-main/reset-password.php?token=$token">here</a> 
+    Click <a href="http://localhost/Web-Resep-Makanan/reset-password.php?token=$token">here</a> 
     to reset your password.
 
     END;

@@ -1,6 +1,5 @@
 <?php
     include "connect.php";
-    include "database.php";
     include "update_database.php";
 
     $process_saved_recipe = mysqli_query($connection, "SELECT * FROM recipe_detail WHERE save=1") or die (mysqli_error($connection));
