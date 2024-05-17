@@ -270,46 +270,56 @@ if(!isset($_SESSION['email'])){
 
 
 
-    <footer class="text-black pt-4 pb-4" style="background-color: #ffaf45;">
-      <div class="container-fluid text-center">
-        <div class="row text-center ps-2 pe-4">
-          <div class="col-3 d-flex justify-content-start" style="font-size: 25px;">Masakuy</div>
-          <div
-            class="col-6 d-flex justify-content-evenly"
-            style="padding-top: 0.5rem;"
-          >
-            <a
-              href="#"
-              class="link-offset-2 link-underline link-underline-opacity-0 text-black"
-              >Home</a
-            >
-            <a
-              href="#"
-              class="link-offset-2 link-underline link-underline-opacity-0 text-black"
-              >Recipe</a
-            >
-            <a
-              href="articles.html"
-              class="link-offset-2 link-underline link-underline-opacity-0 text-black"
-              >Article</a
-            >
+<footer style="font-family: Poppins; background-color: #ffaf45;">
+        <div class="container pb-3 " >
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 mt-5 border-top pb-2" >
+          <div class="col-5">
+            <h3 style="font-weight: 600; ">Masakuy</h3>
+            <p class="text-body-secondary fw-semibold" style="text-align: justify;" >Explore authentic and healthy recipes. Traditional and global food at the palm of your hand</p>
           </div>
-          <div class="col-3 d-flex justify-content-end">
-            <i
-              class="bi bi-whatsapp"
-              style="font-size: 28px; margin-right: 10px"
-            ></i>
-            <i
-              class="bi bi-instagram"
-              style="font-size: 28px; margin-right: 10px"
-            ></i>
-            <i
-              class="bi bi-twitter-x"
-              style="font-size: 28px; margin-right: 10px"
-            ></i>
+      
+          <div class="col-2 offset-2">
+            <h4 style="font-weight: 600; ">Explore</h4>
+            <ul class="nav flex-column fw-semibold">
+              <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-body-secondary">Recipe</a></li>
+              <li class="nav-item mb-2"><a href="articles.html" class="nav-link p-0 text-body-secondary">Articles</a></li>
+            </ul>
           </div>
+      
+          <div class="col-2">
+            <h4 style="font-weight: 600; ">Information</h4>
+            <ul class="nav flex-column fw-semibold">
+              <li class="nav-item mb-2"><a href="terms_condition.html" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>
+              <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">F&Q</a></li>
+              <li class="nav-item mb-2"><a href="contact_us.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+            </ul>
+          </div>
+      
+          <div class="col-2">
+            <h4 style="font-weight: 600; ">Find Us On</h4>
+            <div class="row" style="font-size: 40px">
+              <div class="col-3">
+                  <a href="https://www.whatsapp.com" class="text-black" target="_blank">
+                      <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                  </a>
+              </div>
+              <div class="col-3">
+                  <a href="https://www.instagram.com" class="text-black" target="_blank">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                  </a>
+              </div>
+              <div class="col-2">
+                  <a href="https://www.twitter.com" class="text-black" target="_blank">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+              </div>
+            </div>
+          </div>
+  
         </div>
-      </div>
+        <p class="text-center">© 2024 Masakuy</p>
+        </div>
     </footer>
 
     <!-- bootstrap -->
