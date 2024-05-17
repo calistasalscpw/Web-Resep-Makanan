@@ -1,8 +1,24 @@
 <?php
     include "connect.php";
+    //include "showrecipe.php";
     include "update_database.php";
 
-    $process = mysqli_query($connection, "SELECT * FROM recipe_detail") or die (mysqli_error($connection));
+    //$process = mysqli_query($connection, "SELECT * FROM recipe_detail") or die (mysqli_error($connection));
+
+    // Check if recipe_id is set in the URL
+    if (isset($_GET['recipe_id'])) {
+      $recipe_id =  $_GET['recipe_id'];
+
+      // Fetch recipe details using prepared statement (recommended)
+      $stmt = mysqli_prepare($connection, "SELECT * FROM recipe_detail WHERE recipe_id = ?");
+      mysqli_stmt_bind_param($stmt, "s", $recipe_id);
+      mysqli_stmt_execute($stmt);
+      $result = mysqli_stmt_get_result($stmt);
+
+      // Check if recipe exists
+      if (mysqli_num_rows($result) > 0) {
+        $data = mysqli_fetch_assoc($result);
+      
 ?>
 
 <!DOCTYPE html>
@@ -96,7 +112,7 @@
               >
             </li>
             <li class="nav-item me-2">
-              <a class="nav-link" href="#" style="color: white; font-size: 20px"
+              <a class="nav-link" href="articles.html" style="color: white; font-size: 20px"
                 >Article</a
               >
             </li>
@@ -211,7 +227,7 @@
           </div>
         </div>
         <a href="profil.php" class="d-flex justify-content-end me-4 pe-2">
-          <img              
+          <img
             src="assets/img/profil.png"
             alt=""
             style="width: 13%; height: 13%"
@@ -229,7 +245,7 @@
       <!--Back button-->
       <div style="margin-bottom: 1rem">
         <div class="btn-back">
-          <a href="#"
+          <a href="index.php"
             ><i class="bi bi-arrow-left" style="margin-right: 0.5rem"></i
             >Back</a
           >
@@ -239,9 +255,6 @@
 
       <div class="row">
         <div class="col">
-          <?php
-                  while($data = mysqli_fetch_assoc($process)){
-            ?>
 
           <img
             src="<?php echo $data['photo'] ?>"
@@ -249,6 +262,8 @@
             width="90%"
             class="rounded"
           />
+          
+          <!--TO CHECK LATER-->
           <input type="hidden" id="recipeId" value="<?php echo $data['recipe_id']; ?>"/>
         </div>
         <div class="col">
@@ -383,9 +398,21 @@
               <?php echo $data['steps'] ?>
             </ol>
 
-            <?php
-                  }
-                ?>
+            <?php 
+            
+          } else {
+            echo "Error: Recipe not found.";
+            exit;
+          }
+    
+          mysqli_stmt_close($stmt);
+        } else {
+          echo "Please select a recipe to view details.";
+          exit;
+        }
+            
+            ?>
+          
           </div>
         </div>
       </div>
@@ -407,12 +434,12 @@
             style="padding-top: 0.5rem"
           >
             <a
-              href="#"
+              href="index.php"
               class="link-offset-2 link-underline link-underline-opacity-0 text-black"
               >Home</a
             >
             <a
-              href="#"
+              href="index.php"
               class="link-offset-2 link-underline link-underline-opacity-0 text-black"
               >Recipe</a
             >
