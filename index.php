@@ -1,12 +1,24 @@
 <?php
-  include "proses.php";
-  // include "script.php";
-?>
 
+session_start();
+
+if (isset($_SESSION["user_id"])) {
+    
+    $mysqli = require __DIR__ . "/database.php";
+    
+    $sql = "SELECT * FROM user
+            WHERE id = {$_SESSION["user_id"]}";
+            
+    $result = $mysqli->query($sql);
+    
+    $user = $result->fetch_assoc();
+}
+
+?>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<html>
+<head>
+<meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Masakuy</title>
     <!-- bootstrap -->
@@ -28,8 +40,11 @@
         
       a {text-decoration:none;}
     </style>
-  </head>
-  <body>
+</head>
+<body>
+    <?php if (isset($user)): ?>
+        <?php
+        include "proses.php"?>
     <nav id="navbar" class="navbar navbar-expand-lg" style="background-color: #ffaf45; padding: 1% 0.5%">
       <div class="container-fluid" style="margin-left: 0%">
         <a class="navbar-brand" href="recipeUnfiltered.html" style="width: 7%">
@@ -148,7 +163,7 @@
           </div>
             
       </div>
-        <a href="profil.html" class="d-flex justify-content-end me-4 pe-2">
+        <a href="profil.php" class="d-flex justify-content-end me-4 pe-2">
           <img src="assets/img/profil.png" alt="" style="width: 13%; height: 13%" />
         </a>
           
@@ -189,7 +204,7 @@
                       <i class="bi bi-person" style="font-size: 20px;"></i> <?php echo $resep ['serving'] ?> servings<!-- ambil kolom dari tabel -->
                     </span>
                   </div>
-                  <a href="saverecipe.php?recipe_id=<?php echo $resep['recipe_id']; ?>" class="card-title stretched-link" style="font-size: 20px; font-weight: 600;"><?php echo $resep ['title_recipe'] ?></a><!-- ambil kolom dari tabel -->
+                  <a href="saverecipe.php?recipe_id=<?php echo $resep['recipe_id']; ?>" class="card-title stretched-link" style="font-size: 20px; font-weight: 600;"><?php echo $resep ['title_recipe'] ?></a>
                 </div>
               </div>
             </div>
@@ -316,12 +331,19 @@
             var navbarEnd = document.querySelector('.d-flex.justify-content-end.me-4.pe-2');
 
             if (loginStatus) {
-            navbarEnd.innerHTML = '<a/> <img href="profil.html" src="assets/img/profil.png" style="width: 12%;float:right;" /> </a>';
+            navbarEnd.innerHTML = '<a/> <img href="profil.php" src="assets/img/profil.png" style="width: 12%;float:right;" /> </a>';
             } else {
             navbarEnd.innerHTML = '<a href="login.html" role="button" class="btn fs-5 btn-outline-light" style="background-color: #ffaf45; color: #ffffff;" style="text-decoration:none;">Sign In</a>';            
             }
         }
     </script>
-      
-  </body>
+</html>
+        
+    <?php else: ?>
+        
+        <p><a href="login.php">Log in</a> or <a href="signup.html">sign up</a></p>
+        
+    <?php endif; ?>
+    
+</body>
 </html>
