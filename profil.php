@@ -1,9 +1,17 @@
 <?php
+    include "connect.php";
     include "database.php";
     include "update_database.php";
 
     $process_saved_recipe = mysqli_query($connection, "SELECT * FROM recipe_detail WHERE save=1") or die (mysqli_error($connection));
-    
+
+    session_start();
+
+    if(!isset($_SESSION['email'])){
+      header("Location: login.php");
+      exit;
+    }
+
 ?>
 
 <!doctype html>
@@ -172,11 +180,23 @@
     <!-- Logout button -->
     <button
       type="button"
+      id="logout_btn" 
       class="btn-left btn-outline-primary"
       style="margin-top: 3%;">
       <i class="bi bi-door-open"></i>
       logout
     </button>
+
+    <script>
+      // Get the button element
+      var button = document.getElementById("logout_btn");
+
+      // Add a click event listener to the button
+      button.addEventListener("click", function() {
+        // Navigate to another page when the button is clicked
+        window.location.href = "logout.php";
+      });
+    </script>
 
     <!-- Profil Edit -->
     <div class="container" id="profil-part" style="margin-top: 4%;">
@@ -186,8 +206,8 @@
         <button class="change-profil" onclick="navigateToEdit()"><i class="bi bi-pencil"></i></button>
       </div>
       <div class="col" style="margin-top: 2.5%;">
-        <h2>Masakuyy</h2>
-        <h4>masakuyy@masak.com</h4>
+        <h2><?php echo htmlspecialchars($_SESSION['name']) ?></h2>
+        <h4><?php echo htmlspecialchars($_SESSION['email']) ?></h4>
       </div>
     </div>
 

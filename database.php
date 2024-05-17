@@ -1,11 +1,19 @@
 <?php
 
-$host = "localhost";
+$servername = "localhost";
 $dbname = "login_db";
 $username = "root";
 $password = "";
 
-$mysqli = new mysqli(hostname: $host,
+//buat koneksi
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+//periksi koneksi
+if($conn->connect_error){
+    die("Koneksi gagal: ". $conn->connect_error);
+}
+
+/*$mysqli = new mysqli(hostname: $host,
                      username: $username,
                      password: $password,
                      database: $dbname);
@@ -16,4 +24,6 @@ if ($mysqli->connect_errno) {
     die("Connection error: " . $mysqli->connect_error);
 }
 
-return $mysqli;
+return $mysqli;*/
+
+?>

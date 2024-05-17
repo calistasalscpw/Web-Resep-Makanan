@@ -2,7 +2,12 @@
 
 session_start();
 
-if (isset($_SESSION["user_id"])) {
+if(!isset($_SESSION['email'])){
+  header("Location: login.php");
+  exit;
+}
+
+/*if (isset($_SESSION["user_id"])) {
     
     $mysqli = require __DIR__ . "/database.php";
     
@@ -12,7 +17,7 @@ if (isset($_SESSION["user_id"])) {
     $result = $mysqli->query($sql);
     
     $user = $result->fetch_assoc();
-}
+}*/
 
 ?>
 <!DOCTYPE html>
@@ -41,7 +46,7 @@ if (isset($_SESSION["user_id"])) {
     </style>
 </head>
 <body>
-    <?php if (isset($user)): ?>
+    <?php if (!isset($user)): ?>
         <?php
         include "proses.php"?>
     <nav id="navbar" class="navbar navbar-expand-lg" style="background-color: #ffaf45; padding: 1% 0.5%">

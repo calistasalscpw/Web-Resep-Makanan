@@ -1,6 +1,42 @@
 <?php
 
-$is_invalid = false;
+session_start();
+require 'database.php';
+
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM user WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    //memeriksa apakah pengguna ada
+    if($result->num_rows > 0){
+        $user = $result -> fetch_assoc();
+        //verifikasi kata sandi
+        if(password_verify($password, $user['password_hash'])){
+            //simpan informasi pengguna dalam sesi
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['name'] = $user['name'];
+            //arahkan ke halaman index
+            header("Location: index.php");
+            exit;
+        } else{
+            echo "Kata sandi yang anda masukkan salah";
+        }
+    } else {
+        echo "Pengguna tidak ditemukan";
+    }
+
+    $stmt->close();
+}
+
+$conn->close();
+
+/*$is_invalid = false;
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
@@ -30,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     
     $is_invalid = true;
-}
+}*/
 
 ?>
 <!DOCTYPE html>
