@@ -51,10 +51,10 @@
         <div class="collapse navbar-collapse ms-4" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item me-2">
-                    <a class="nav-link" href="#" style="color: white; font-size: 20px">Recipe</a>
+                    <a class="nav-link" href="index.php" style="color: white; font-size: 20px">Recipe</a>
                 </li>
                 <li class="nav-item me-2">
-                    <a class="nav-link" href="#" style="color: white; font-size: 20px">Article</a>
+                    <a class="nav-link" href="articles.html" style="color: white; font-size: 20px">Article</a>
                 </li>
             </ul>
             <div class="dropdown" style="width: 71%">
