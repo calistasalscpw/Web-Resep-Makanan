@@ -188,7 +188,7 @@
                       <i class="bi bi-person" style="font-size: 20px;"></i> <?php echo $resep ['serving'] ?> servings<!-- ambil kolom dari tabel -->
                     </span>
                   </div>
-                  <a href="saverecipe.html" class="card-title stretched-link" style="font-size: 20px; font-weight: 600;"><?php echo $resep ['title_recipe'] ?></a><!-- ambil kolom dari tabel -->
+                  <a href="saverecipe.php?recipe_id=<?php echo $resep['recipe_id']; ?>" class="card-title stretched-link" style="font-size: 20px; font-weight: 600;"><?php echo $resep ['title_recipe'] ?></a><!-- ambil kolom dari tabel -->
                 </div>
               </div>
             </div>
