@@ -1,9 +1,8 @@
 <?php
+    require 'connect.php';
+    require 'update_database.php';
     session_start();
     if (!isset($_SESSION["user_id"])) {
-        include "connect.php";
-        include "database.php";
-        include "update_database.php";
 
         $process_saved_recipe = mysqli_query($connection, "SELECT * FROM recipe_detail WHERE save=1") or die (mysqli_error($connection));
 
@@ -11,6 +10,24 @@
             header("Location: login.php");
             exit;
         }
+    }
+
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $name = $_POST['name'];
+        
+        $name = mysqli_real_escape_string($connection, $name);
+
+        $query = "UPDATE user SET name='$name' WHERE email='".$_SESSION['email']."'";
+
+        if($connection->query($query) === TRUE){
+            $_SESSION['name'] = $name;
+            echo "<script>alert('Profil berhasil diperbarui')</script>";
+
+        } else {
+            echo "Error : ".$connection->error;
+        }
+
+        $connection->close();
     }
 ?>
 
@@ -37,6 +54,12 @@
       }
         
       a {text-decoration:none;}
+
+      button:disabled{
+        background-color: #ffd7a2;
+        color: #ffd7a2;
+        cursor: not-allowed;
+      }
     </style>
 </head>
 <body>
@@ -163,7 +186,7 @@
         <!-- <button class="btn shadow d-block" style="color: black; margin-top: 2rem; font-weight: 800; border-color: #ffaf45; border-width: 3px;">Change Profil<i class="bi bi-pencil" style="margin: 0.5rem;"></i></button> -->
     </div>
     <div class="container col-7">
-        <form class="col" method="post" action="edit-profil.php" style="width: auto;">
+        <form class="col" id="editProfileForm" method="post" action="edit-profil.php" style="width: auto;">
             <?php if (isset($error_message)): ?>
                 <div class="alert alert-danger" role="alert">
                     <?= htmlspecialchars($error_message) ?>
@@ -183,11 +206,12 @@
                 <input 
                     class="form-control" 
                     type="email" name="email" 
-                    value=<?php echo htmlspecialchars($_SESSION['email']) ?> 
+                    value=<?php echo htmlspecialchars($_SESSION['email']) ?>
+                    readonly
                     style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 3em;"
                 >
             </div>
-            <div class="mb-4">
+            <!-- <div class="mb-4">
                 <label for="password" style="font-size: 12pt;">Password</label>
                 <input 
                     class="form-control" 
@@ -195,55 +219,87 @@
                     value="***" placeholder="Enter new password" 
                     style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 3em;"
                 >
-            </div>
+            </div> -->
             <div class="row" style="align-items: end;">
-                <button class="btn shadow w-100" type="submit" style="width: 100px; color: black; background-color: #ffaf45; font-weight: 800;">Save Changes</button>
+                <button class="btn shadow w-100" type="submit" id="submitEdit" style="width: 100px; color: black; background-color: #ffaf45; font-weight: 800;" disabled>Save Changes</button>
             </div>
         </form>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', (event) =>{
+                const form = document.getElementById('editProfileForm');
+                const submitEditButton = document.getElementById('submitEdit');
+                const initialFormState = new FormData(form);
+
+                function checkForChanges() {
+                    const currentFormState = new FormData(form);
+                    for (let [key, value] of initialFormState.entries()){
+                        if (currentFormState.get(key) !== value){
+                            submitEditButton.disabled = false;
+                            return;
+                        }
+                    }
+                    submitButton.disabled = true;
+                }
+
+                form.addEventListener('input', checkForChanges);
+                form.addEventListener('change', checkForChanges);
+            }) 
+        </script>
     </div>
 </div>
 
-<footer class="text-black pt-4 pb-4" style="background-color: #ffaf45;">
-    <div class="container-fluid text-center">
-        <div class="row text-center ps-2 pe-4">
-            <div class="col-3 d-flex justify-content-start" style="font-size: 25px;">Masakuy</div>
-            <div
-                class="col-6 d-flex justify-content-evenly"
-                style="padding-top: 0.5rem;"
-            >
-                <a
-                    href="#"
-                    class="link-offset-2 link-underline link-underline-opacity-0 text-black"
-                >Home</a
-                >
-                <a
-                    href="#"
-                    class="link-offset-2 link-underline link-underline-opacity-0 text-black"
-                >Recipe</a
-                >
-                <a
-                    href="articles.html"
-                    class="link-offset-2 link-underline link-underline-opacity-0 text-black"
-                >Article</a
-                >
-            </div>
-            <div class="col-3 d-flex justify-content-end">
-                <i
-                    class="bi bi-whatsapp"
-                    style="font-size: 28px; margin-right: 10px"
-                ></i>
-                <i
-                    class="bi bi-instagram"
-                    style="font-size: 28px; margin-right: 10px"
-                ></i>
-                <i
-                    class="bi bi-twitter-x"
-                    style="font-size: 28px; margin-right: 10px"
-                ></i>
-            </div>
+<footer style="font-family: Poppins; background-color: #ffaf45;">
+      <div class="container pb-3 " style="text-align:left">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 mt-5 border-top pb-2" >
+        <div class="col-5">
+          <h3 style="font-weight: 600; ">Masakuy</h3>
+          <p class="text-body-secondary fw-semibold" style="text-align: justify;" >Explore authentic and healthy recipes. Traditional and global food at the palm of your hand</p>
         </div>
-    </div>
-</footer>
+    
+        <div class="col-2 offset-2">
+          <h4 style="font-weight: 600; ">Explore</h4>
+          <ul class="nav flex-column fw-semibold">
+            <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-body-secondary">Recipe</a></li>
+            <li class="nav-item mb-2"><a href="articles.html" class="nav-link p-0 text-body-secondary">Articles</a></li>
+          </ul>
+        </div>
+    
+        <div class="col-2">
+          <h4 style="font-weight: 600; ">Information</h4>
+          <ul class="nav flex-column fw-semibold">
+            <li class="nav-item mb-2"><a href="terms_condition.html" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>
+            <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">F&Q</a></li>
+            <li class="nav-item mb-2"><a href="contact_us.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+          </ul>
+        </div>
+    
+        <div class="col-2">
+          <h4 style="font-weight: 600; ">Find Us On</h4>
+          <div class="row" style="font-size: 40px">
+            <div class="col-3">
+                <a href="https://www.whatsapp.com" class="text-black" target="_blank">
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="https://www.instagram.com" class="text-black" target="_blank">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+            <div class="col-2">
+                <a href="https://www.twitter.com" class="text-black" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="text-center">© 2024 Masakuy</p>
+      </div>
+    </footer>
 
 <!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

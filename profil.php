@@ -229,7 +229,7 @@
       ?>
       <div class="row">
         <div class="col-6">
-          <a href="saverecipe.php">
+          <a href="saverecipe.php?recipe_id=<?php echo $data['recipe_id']; ?>">
             <div class="card" style="width: 30rem; border-color: black; border-radius: 10px; padding: 5px;">
               <img src="<?php echo $data['photo'] ?>" class="card-img" alt=""/>
               <div class="card-img-overlay">
