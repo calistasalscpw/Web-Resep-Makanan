@@ -82,7 +82,7 @@
       style="background-color: #ffaf45; padding: 1% 0.5%"
     >
       <div class="container-fluid" style="margin-left: 0%">
-        <a class="navbar-brand" href="recipeUnfiltered.html" style="width: 7%">
+        <a class="navbar-brand" href="index.php" style="width: 7%">
           <img
             src="assets/img/iconPutih.png"
             alt=""
