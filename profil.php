@@ -162,7 +162,7 @@
           </div>
             
       </div>
-        <a href="profil.html" class="d-flex justify-content-end me-4 pe-2">
+        <a href="profil.php" class="d-flex justify-content-end me-4 pe-2">
           <img src="assets/img/profil.png" alt="" style="width: 13%; height: 13%" />
         </a>
           
@@ -194,7 +194,7 @@
     <script>
       function navigateToEdit() {
         // Change 'otherpage.html' to the URL of the page you want to navigate to
-        window.location.href = 'edit-profil.html';
+        window.location.href = 'edit-profil.php';
       }
       </script>
 
@@ -209,19 +209,21 @@
       ?>
       <div class="row">
         <div class="col-6">
-          <div class="card" style="width: 30rem; border-color: black; border-radius: 10px; padding: 5px;">
-            <img src="<?php echo $data['photo'] ?>" class="card-img" alt=""/>
-            <div class="card-img-overlay">
-              <span style="margin-left: 90%; font-size: 30px;"><i class="bi bi-bookmark-fill" onclick=""></i></span>
-            </div>
-            <div class="card-body px-0">
-              <div>
-                <span class="badge rounded-pill" style="background-color: #fb6d48; font-size: 15px; font-weight: 400; margin-right: 12.7rem"> <i class="bi bi-stopwatch" style="font-size: 18px"></i><?php echo $data['time']." minutes" ?></span>
-                <span class="badge rounded-pill" style="background-color: #fb6d48; font-size: 15px; font-weight: 400"> <i class="bi bi-person" style="font-size: 18px"></i><?php echo $data['serving']." servings" ?></span>
+          <a href="saverecipe.php">
+            <div class="card" style="width: 30rem; border-color: black; border-radius: 10px; padding: 5px;">
+              <img src="<?php echo $data['photo'] ?>" class="card-img" alt=""/>
+              <div class="card-img-overlay">
+                <span style="margin-left: 90%; font-size: 30px;"><i class="bi bi-bookmark-fill" onclick=""></i></span>
               </div>
-              <p class="card-title" style="font-size: 20px; font-weight: 600"><?php echo $data['title_recipe'] ?></p>
+              <div class="card-body px-0">
+                <div>
+                  <span class="badge rounded-pill" style="background-color: #fb6d48; font-size: 15px; font-weight: 400; margin-right: 12.7rem"> <i class="bi bi-stopwatch" style="font-size: 18px"></i><?php echo $data['time']." minutes" ?></span>
+                  <span class="badge rounded-pill" style="background-color: #fb6d48; font-size: 15px; font-weight: 400"> <i class="bi bi-person" style="font-size: 18px"></i><?php echo $data['serving']." servings" ?></span>
+                </div>
+                <p class="card-title" style="font-size: 20px; font-weight: 600"><?php echo $data['title_recipe'] ?></p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
       
