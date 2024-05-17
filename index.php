@@ -43,7 +43,7 @@
               <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px">Recipe</a>
             </li>
             <li class="nav-item me-2">
-              <a class="nav-link" href="#" style="color: white; font-size: 20px">Article</a>
+              <a class="nav-link" href="articles.html" style="color: white; font-size: 20px">Article</a>
             </li>
           </ul>
           <div class="dropdown" style="width: 71%">
