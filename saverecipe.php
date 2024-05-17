@@ -1,5 +1,5 @@
 <?php
-    include "connect.php";
+    include "database.php";
     //include "showrecipe.php";
     include "update_database.php";
 
