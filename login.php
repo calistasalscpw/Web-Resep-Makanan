@@ -1,35 +1,37 @@
 <?php
 
-$is_invalid = false;
+session_start();
+require 'database.php';
 
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    
-    $mysqli = require __DIR__ . "/database.php";
-    
-    $sql = sprintf("SELECT * FROM user
-                    WHERE email = '%s'",
-                   $mysqli->real_escape_string($_POST["email"]));
-    
-    $result = $mysqli->query($sql);
-    
-    $user = $result->fetch_assoc();
-    
-    if ($user) {
-        
-        if (password_verify($_POST["password"], $user["password_hash"])) {
-            
-            session_start();
-            
-            session_regenerate_id();
-            
-            $_SESSION["user_id"] = $user["id"];
-            
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM user WHERE email = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    //memeriksa apakah pengguna ada
+    if($result->num_rows > 0){
+        $user = $result -> fetch_assoc();
+        //verifikasi kata sandi
+        if(password_verify($password, $user['password_hash'])){
+            //simpan informasi pengguna dalam sesi
+            $_SESSION['email'] = $user['email'];
+            $_SESSION['name'] = $user['name'];
+            //arahkan ke halaman index
             header("Location: index.php");
             exit;
+        } else{
+            echo "Kata sandi yang anda masukkan salah";
         }
+    } else {
+        echo "Pengguna tidak ditemukan";
     }
-    
-    $is_invalid = true;
+
+    $stmt->close();
 }
 
 ?>
@@ -48,10 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-
-<?php if ($is_invalid): ?>
-        <em>Invalid login</em>
-<?php endif; ?>
 
 <body style="font-family: Poppins, sans-serif;">    
 <div class="card">

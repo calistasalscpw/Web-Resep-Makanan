@@ -1,44 +1,17 @@
 <?php
-session_start();
-if (isset($_SESSION["user_id"])) {
-    $mysqli = require __DIR__ . "/database.php";
-    
-    $user_id = $_SESSION["user_id"];
-    
-    // Fetch user data
-    $sql = "SELECT * FROM user WHERE id = ?";
-    $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("i", $user_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $user = $result->fetch_assoc();
-    
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $name = $_POST['name'];
-        $email = $_POST['email'];
-        $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-        
-        // Update user data
-        $update_sql = "UPDATE user SET name = ?, email = ?, password = ? WHERE id = ?";
-        $update_stmt = $mysqli->prepare($update_sql);
-        $update_stmt->bind_param("sssi", $name, $email, $password, $user_id);
-        
-        if ($update_stmt->execute()) {
-            // Update the $user array with new data
-            $user['name'] = $name;
-            $user['email'] = $email;
-            // Redirect to avoid resubmission
-            header("Location: edit-profil.php");
+    session_start();
+    if (!isset($_SESSION["user_id"])) {
+        include "connect.php";
+        include "database.php";
+        include "update_database.php";
+
+        $process_saved_recipe = mysqli_query($connection, "SELECT * FROM recipe_detail WHERE save=1") or die (mysqli_error($connection));
+
+        if(!isset($_SESSION['email'])){
+            header("Location: login.php");
             exit;
-        } else {
-            $error_message = "Failed to update profile.";
         }
     }
-} else {
-    // Redirect to login if not logged in
-    header("Location: login.php");
-    exit;
-}
 ?>
 
 <!DOCTYPE html>
@@ -187,7 +160,7 @@ if (isset($_SESSION["user_id"])) {
     <div class="container col-3" style="align-items: center;">
         <img class="circle-profil"
              src="assets/img/profil.png" alt="profil anda">
-        <button class="btn shadow d-block" style="color: black; margin-top: 2rem; font-weight: 800; border-color: #ffaf45; border-width: 3px;">Change Profil<i class="bi bi-pencil" style="margin: 0.5rem;"></i></button>
+        <!-- <button class="btn shadow d-block" style="color: black; margin-top: 2rem; font-weight: 800; border-color: #ffaf45; border-width: 3px;">Change Profil<i class="bi bi-pencil" style="margin: 0.5rem;"></i></button> -->
     </div>
     <div class="container col-7">
         <form class="col" method="post" action="edit-profil.php" style="width: auto;">
@@ -198,15 +171,30 @@ if (isset($_SESSION["user_id"])) {
             <?php endif; ?>
             <div class="mb-3">
                 <label for="name" style="font-size: 12pt;">Name</label>
-                <input class="form-control" type="text" name="name" value="<?= htmlspecialchars($user['name']) ?>" style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 2em;">
+                <input 
+                    class="form-control" 
+                    type="text" name="name" 
+                    value=<?php echo htmlspecialchars($_SESSION['name']) ?> 
+                    style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 2em;"
+                >
             </div>
             <div class="mb-3">
                 <label for="email" style="font-size: 12pt;">Email</label>
-                <input class="form-control" type="email" name="email" value="<?= htmlspecialchars($user['email']) ?>" style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 3em;">
+                <input 
+                    class="form-control" 
+                    type="email" name="email" 
+                    value=<?php echo htmlspecialchars($_SESSION['email']) ?> 
+                    style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 3em;"
+                >
             </div>
             <div class="mb-4">
                 <label for="password" style="font-size: 12pt;">Password</label>
-                <input class="form-control" type="password" name="password" value="" placeholder="Enter new password" style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 3em;">
+                <input 
+                    class="form-control" 
+                    type="password" name="password" 
+                    value="***" placeholder="Enter new password" 
+                    style="width: 800px; background-color: transparent; border: black; border-radius: 3px; margin-top: 3em;"
+                >
             </div>
             <div class="row" style="align-items: end;">
                 <button class="btn shadow w-100" type="submit" style="width: 100px; color: black; background-color: #ffaf45; font-weight: 800;">Save Changes</button>
