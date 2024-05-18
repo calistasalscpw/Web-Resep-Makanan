@@ -115,14 +115,14 @@ include "proses.php";
               <li>
                 <a class="dropdown-item">Dessert</a>
                 <ul>
-                  <li><a href="index/DesMilk.php" style="color: white">Milk</a></li>
-                  <li><a href="index/DesFruit.php" style="color: white">Fruit</a></li>
-                  <li><a href="index/DesChocolate.php" style="color: white">Chocolate</a></li>
-                  <li><a href="index/DesJelly.php" style="color: white">Jelly</a></li>
-                  <li><a href="index/DesYoghurt.php" style="color: white">Yoghurt</a></li>
-                  <li><a href="index/DesBiscuit.php" style="color: white">Biscuit</a></li>
-                  <li><a href="index/DesCheese.php" style="color: white">Cheese</a></li>
-                  <li><a href="index/DesFlour.php" style="color: white">Flour</a></li>
+                  <li><a href="index/DessertMilk.php" style="color: white">Milk</a></li>
+                  <li><a href="index/DessertFruit.php" style="color: white">Fruit</a></li>
+                  <li><a href="index/DessertChocolate.php" style="color: white">Chocolate</a></li>
+                  <li><a href="index/DessertJelly.php" style="color: white">Jelly</a></li>
+                  <li><a href="index/DessertYoghurt.php" style="color: white">Yoghurt</a></li>
+                  <li><a href="index/DessertBiscuit.php" style="color: white">Biscuit</a></li>
+                  <li><a href="index/DessertCheese.php" style="color: white">Cheese</a></li>
+                  <li><a href="index/DessertFlour.php" style="color: white">Flour</a></li>
                 </ul>
               </li>
               <li>
