@@ -231,8 +231,8 @@ include "../proses.php";
           <div class="col-2 offset-2">
             <h4 style="font-weight: 600; ">Explore</h4>
             <ul class="nav flex-column fw-semibold">
-              <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-body-secondary">Home</a></li>
-              <li class="nav-item mb-2"><a href="index.php" class="nav-link p-0 text-body-secondary">Recipe</a></li>
+              <li class="nav-item mb-2"><a href="../index.php" class="nav-link p-0 text-body-secondary">Home</a></li>
+              <li class="nav-item mb-2"><a href="../index.php" class="nav-link p-0 text-body-secondary">Recipe</a></li>
               <li class="nav-item mb-2"><a href="../articles.html" class="nav-link p-0 text-body-secondary">Articles</a></li>
             </ul>
           </div>

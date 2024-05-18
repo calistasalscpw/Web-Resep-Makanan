@@ -38,7 +38,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Masakuy</title>
     <!-- css -->
-    <link rel="stylesheet" href="edit-profil.css" />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
@@ -46,6 +47,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       body {
         font-family: "Poppins";
@@ -179,13 +181,15 @@
     </div>
 </nav>
 
-<div class="row" style="margin-top: 2rem; margin-bottom: 3rem;">
-    <div class="container col-3" style="align-items: center;">
-        <img class="circle-profil"
-             src="assets/img/profil.png" alt="profil anda">
+<div class="row pt-5 pb-5 mt-5 mb-5" style="margin-top: 2rem; margin-bottom: 3rem;">
+
+    <div class="container col-3 text-center" style="align-items: center; position: relative; display: inline-block;">
+        <img class="circle-profil" src="assets/img/profil.png" alt="profil anda" style="width: 250px;height: 250px;border-radius: 50%;overflow: hidden;display: inline-block;">
         <!-- <button class="btn shadow d-block" style="color: black; margin-top: 2rem; font-weight: 800; border-color: #ffaf45; border-width: 3px;">Change Profil<i class="bi bi-pencil" style="margin: 0.5rem;"></i></button> -->
     </div>
-    <div class="container col-7">
+
+
+    <div class="container col-7" style="position: relative; display: inline-block;">
         <form class="col" id="editProfileForm" method="post" action="edit-profil.php" style="width: auto;">
             <?php if (isset($error_message)): ?>
                 <div class="alert alert-danger" role="alert">
@@ -193,7 +197,7 @@
                 </div>
             <?php endif; ?>
             <div class="mb-3">
-                <label for="name" style="font-size: 12pt;">Name</label>
+                <label for="name" style="font-size: 18pt;">Name</label>
                 <input 
                     class="form-control" 
                     type="text" name="name" 
@@ -202,7 +206,7 @@
                 >
             </div>
             <div class="mb-3">
-                <label for="email" style="font-size: 12pt;">Email</label>
+                <label for="email" style="font-size: 18pt;">Email</label>
                 <input 
                     class="form-control" 
                     type="email" name="email" 
@@ -224,33 +228,15 @@
                 <button class="btn shadow w-100" type="submit" id="submitEdit" style="width: 100px; color: black; background-color: #ffaf45; font-weight: 800;" disabled>Save Changes</button>
             </div>
         </form>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', (event) =>{
-                const form = document.getElementById('editProfileForm');
-                const submitEditButton = document.getElementById('submitEdit');
-                const initialFormState = new FormData(form);
-
-                function checkForChanges() {
-                    const currentFormState = new FormData(form);
-                    for (let [key, value] of initialFormState.entries()){
-                        if (currentFormState.get(key) !== value){
-                            submitEditButton.disabled = false;
-                            return;
-                        }
-                    }
-                    submitButton.disabled = true;
-                }
-
-                form.addEventListener('input', checkForChanges);
-                form.addEventListener('change', checkForChanges);
-            }) 
-        </script>
     </div>
 </div>
 
+<div class="container">
+    <br></br>
+</div>
+
 <footer style="font-family: Poppins; background-color: #ffaf45;">
-      <div class="container pb-3 " style="text-align:left">
+      <div class="container pb-3 " >
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 mt-5 border-top pb-2" >
         <div class="col-5">
           <h3 style="font-weight: 600; ">Masakuy</h3>
@@ -299,8 +285,30 @@
       </div>
       <p class="text-center">© 2024 Masakuy</p>
       </div>
-    </footer>
+</footer>
+        
 
+<script>
+            document.addEventListener('DOMContentLoaded', (event) =>{
+                const form = document.getElementById('editProfileForm');
+                const submitEditButton = document.getElementById('submitEdit');
+                const initialFormState = new FormData(form);
+
+                function checkForChanges() {
+                    const currentFormState = new FormData(form);
+                    for (let [key, value] of initialFormState.entries()){
+                        if (currentFormState.get(key) !== value){
+                            submitEditButton.disabled = false;
+                            return;
+                        }
+                    }
+                    submitButton.disabled = true;
+                }
+
+                form.addEventListener('input', checkForChanges);
+                form.addEventListener('change', checkForChanges);
+            }) 
+</script>
 <!-- bootstrap -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
