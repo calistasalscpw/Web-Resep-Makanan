@@ -233,7 +233,7 @@
         return $daftarResep;
     }
     function DessertBiscuit(){
-        $tabel_recipesDetail = mysqli_query(koneksi(), "SELECT * FROM recipe_detail WHERE category = 'Dessert' AND category_ingredient = 'BiscuitDessertBiscuit'") or die (mysqli_error(koneksi()));
+        $tabel_recipesDetail = mysqli_query(koneksi(), "SELECT * FROM recipe_detail WHERE category = 'Dessert' AND category_ingredient = 'Biscuit'") or die (mysqli_error(koneksi()));
         while($row = mysqli_fetch_assoc($tabel_recipesDetail)){
             $daftarResep[] = $row;
         }
