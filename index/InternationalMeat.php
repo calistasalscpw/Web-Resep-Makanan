@@ -240,9 +240,9 @@ include "../proses.php";
           <div class="col-2">
             <h4 style="font-weight: 600; ">Information</h4>
             <ul class="nav flex-column fw-semibold">
-              <li class="nav-item mb-2"><a href="terms_condition.html" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>
-              <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">F&Q</a></li>
-              <li class="nav-item mb-2"><a href="contact_us.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+              <li class="nav-item mb-2"><a href="../terms_condition.html" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>
+              <li class="nav-item mb-2"><a href="../faq.html" class="nav-link p-0 text-body-secondary">F&Q</a></li>
+              <li class="nav-item mb-2"><a href="../contact_us.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
             </ul>
           </div>
       

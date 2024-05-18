@@ -64,7 +64,7 @@ include "../proses.php";
               <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px">Recipe</a>
             </li>
             <li class="nav-item me-2">
-              <a class="nav-link" href="articles.html" style="color: white; font-size: 20px">Article</a>
+              <a class="nav-link" href="../articles.html" style="color: white; font-size: 20px">Article</a>
             </li>
           </ul>
           <div class="dropdown" style="width: 71%">
@@ -209,7 +209,7 @@ include "../proses.php";
                       <i class="bi bi-person" style="font-size: 20px;"></i> <?php echo $resep ['serving'] ?> servings<!-- ambil kolom dari tabel -->
                     </span>
                   </div>
-                  <a href="saverecipe.php?recipe_id=<?php echo $resep['recipe_id']; ?>" class="card-title stretched-link" style="font-size: 20px; font-weight: 600;"><?php echo $resep ['title_recipe'] ?></a>
+                  <a href="../saverecipe.php?recipe_id=<?php echo $resep['recipe_id']; ?>" class="card-title stretched-link" style="font-size: 20px; font-weight: 600;"><?php echo $resep ['title_recipe'] ?></a>
                 </div>
               </div>
             </div>
@@ -233,16 +233,16 @@ include "../proses.php";
             <ul class="nav flex-column fw-semibold">
               <li class="nav-item mb-2"><a href="../index.php" class="nav-link p-0 text-body-secondary">Home</a></li>
               <li class="nav-item mb-2"><a href="../index.php" class="nav-link p-0 text-body-secondary">Recipe</a></li>
-              <li class="nav-item mb-2"><a href="articles.html" class="nav-link p-0 text-body-secondary">Articles</a></li>
+              <li class="nav-item mb-2"><a href="../articles.html" class="nav-link p-0 text-body-secondary">Articles</a></li>
             </ul>
           </div>
       
           <div class="col-2">
             <h4 style="font-weight: 600; ">Information</h4>
             <ul class="nav flex-column fw-semibold">
-              <li class="nav-item mb-2"><a href="terms_condition.html" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>
-              <li class="nav-item mb-2"><a href="faq.html" class="nav-link p-0 text-body-secondary">F&Q</a></li>
-              <li class="nav-item mb-2"><a href="contact_us.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+              <li class="nav-item mb-2"><a href="../terms_condition.html" class="nav-link p-0 text-body-secondary">Terms & Conditions</a></li>
+              <li class="nav-item mb-2"><a href="../faq.html" class="nav-link p-0 text-body-secondary">F&Q</a></li>
+              <li class="nav-item mb-2"><a href="../contact_us.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
             </ul>
           </div>
       
@@ -310,7 +310,7 @@ include "../proses.php";
               <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px">Recipe</a>
             </li>
             <li class="nav-item me-2">
-              <a class="nav-link" href="articles.html" style="color: white; font-size: 20px">Article</a>
+              <a class="nav-link" href="../articles.html" style="color: white; font-size: 20px">Article</a>
             </li>
           </ul>
           <div class="dropdown" style="width: 71%">
@@ -453,7 +453,7 @@ include "../proses.php";
                       <i class="bi bi-person" style="font-size: 20px;"></i> <?php echo $resep ['serving'] ?> servings<!-- ambil kolom dari tabel -->
                     </span>
                   </div>
-                  <a href="saverecipe.php?recipe_id=<?php echo $resep['recipe_id']; ?>" class="card-title stretched-link" style="font-size: 20px; font-weight: 600;"><?php echo $resep ['title_recipe'] ?></a>
+                  <a href="../saverecipe.php?recipe_id=<?php echo $resep['recipe_id']; ?>" class="card-title stretched-link" style="font-size: 20px; font-weight: 600;"><?php echo $resep ['title_recipe'] ?></a>
                 </div>
               </div>
             </div>
@@ -483,7 +483,7 @@ include "../proses.php";
               >Recipe</a
             >
             <a
-              href="articles.html"
+              href="../articles.html"
               class="link-offset-2 link-underline link-underline-opacity-0 text-black"
               >Article</a
             >
