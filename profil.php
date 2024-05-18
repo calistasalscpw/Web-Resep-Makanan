@@ -19,7 +19,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Title -->
-    <title>Masakuy - Profil</title>
+    <title>Profil - Masakuy</title>
 
     <!-- css -->
     <link rel="stylesheet" href="profil.css" />
