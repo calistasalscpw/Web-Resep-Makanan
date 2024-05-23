@@ -38,6 +38,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Edit Profile - Masakuy</title>
     <!-- css -->
+    <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/bs-theme-overrides.css">
     <!-- bootstrap -->
@@ -88,91 +89,98 @@
                     <span><i class="bi bi-caret-down-fill" style="font-size: 20px"></i></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Breakfast</a>
-                        <ul>
-                            <li><a href="">Meat</a></li>
-                            <li><a href="">Seafood</a></li>
-                            <li><a href="">Mushroom</a></li>
-                            <li><a href="">Vegetables</a></li>
-                            <li><a href="">Egg</a></li>
-                            <li><a href="">Noodles</a></li>
-                            <li><a href="">Tofu</a></li>
-                            <li><a href="">Chicken Meat</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Lunch</a>
-                        <ul>
-                            <li><a href="">Meat</a></li>
-                            <li><a href="">Seafood</a></li>
-                            <li><a href="">Mushroom</a></li>
-                            <li><a href="">Vegetables</a></li>
-                            <li><a href="">Egg</a></li>
-                            <li><a href="">Noodles</a></li>
-                            <li><a href="">Tofu</a></li>
-                            <li><a href="">Chicken Meat</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Dinner</a>
-                        <ul>
-                            <li><a href="">Meat</a></li>
-                            <li><a href="">Seafood</a></li>
-                            <li><a href="">Mushroom</a></li>
-                            <li><a href="">Vegetables</a></li>
-                            <li><a href="">Egg</a></li>
-                            <li><a href="">Noodles</a></li>
-                            <li><a href="">Tofu</a></li>
-                            <li><a href="">Chicken Meat</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Dessert</a>
-                        <ul>
-                            <li><a href="">Milk</a></li>
-                            <li><a href="">Fruit</a></li>
-                            <li><a href="">Chocolate</a></li>
-                            <li><a href="">Jelly</a></li>
-                            <li><a href="">Yogurt</a></li>
-                            <li><a href="">Biscuit</a></li>
-                            <li><a href="">Cheese</a></li>
-                            <li><a href="">Flour</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Snack</a>
-                        <ul>
-                            <li><a href="">Meat</a></li>
-                            <li><a href="">Seafood</a></li>
-                            <li><a href="">Mushroom</a></li>
-                            <li><a href="">Vegetables</a></li>
-                            <li><a href="">Egg</a></li>
-                            <li><a href="">Noodles</a></li>
-                            <li><a href="">Tofu</a></li>
-                            <li><a href="">Chicken Meat</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="dropdown-item" href="#">Traditional Food</a>
-                        <ul>
-                            <li><a href="">Meat</a></li>
-                            <li><a href="">Seafood</a></li>
-                            <li><a href="">Mushroom</a></li>
-                            <li><a href="">Vegetables</a></li>
-                            <li><a href="">Egg</a></li>
-                            <li><a href="">Noodles</a></li>
-                            <li><a href="">Tofu</a></li>
-                            <li><a href="">Chicken Meat</a></li>
-                        </ul>
-                    </li>
-                    <li><a class="dropdown-item" href="#">International Food</a>
-                        <ul>
-                            <li><a href="">Meat</a></li>
-                            <li><a href="">Seafood</a></li>
-                            <li><a href="">Mushroom</a></li>
-                            <li><a href="">Vegetables</a></li>
-                            <li><a href="">Egg</a></li>
-                            <li><a href="">Noodles</a></li>
-                            <li><a href="">Tofu</a></li>
-                            <li><a href="">Chicken Meat</a></li>
-                        </ul>
-                    </li>
+              <li>
+                <a class="dropdown-item">Breakfast</a>
+                <ul>
+                  <li><a href="index/BreakMeat.php" style="color: white">Meat</a></li>
+                  <li><a href="index/BreakSeafood.php" style="color: white">Seafood</a></li>
+                  <li><a href="index/BreakMushroom.php" style="color: white">Mushroom</a></li>
+                  <li><a href="index/BreakVegetable.php" style="color: white">Vegetables</a></li>
+                  <li><a href="index/BreakEgg.php" style="color: white">Egg</a></li>
+                  <li><a href="index/BreakNoodles.php" style="color: white">Noodles</a></li>
+                  <li><a href="index/BreakTofu.php" style="color: white">Tofu</a></li>
+                  <li><a href="index/BreakChicken.php" style="color: white">Chicken Meat</a></li>
                 </ul>
+              </li>
+              <li>
+                <a class="dropdown-item">Lunch</a>
+                <ul>
+                  <li><a href="index/LunchMeat.php" style="color: white">Meat</a></li>
+                  <li><a href="index/LunchSeafood.php" style="color: white">Seafood</a></li>
+                  <li><a href="index/LunchMushroom.php" style="color: white">Mushroom</a></li>
+                  <li><a href="index/LunchVegetable.php" style="color: white">Vegetables</a></li>
+                  <li><a href="index/LunchEgg.php" style="color: white">Egg</a></li>
+                  <li><a href="index/LunchNoodles.php" style="color: white">Noodles</a></li>
+                  <li><a href="index/LunchTofu.php" style="color: white">Tofu</a></li>
+                  <li><a href="index/LunchChicken.php" style="color: white">Chicken Meat</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item">Dinner</a>
+                <ul>
+                  <li><a href="index/DinnerMeat.php" style="color: white">Meat</a></li>
+                  <li><a href="index/DinnerSeafood.php" style="color: white">Seafood</a></li>
+                  <li><a href="index/DinnerMushroom.php" style="color: white">Mushroom</a></li>
+                  <li><a href="index/DinnerVegetable.php" style="color: white">Vegetables</a></li>
+                  <li><a href="index/DinnerEgg.php" style="color: white">Egg</a></li>
+                  <li><a href="index/DinnerNoodles.php" style="color: white">Noodles</a></li>
+                  <li><a href="index/DinnerTofu.php" style="color: white">Tofu</a></li>
+                  <li><a href="index/DinnerChicken.php" style="color: white">Chicken Meat</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item">Dessert</a>
+                <ul>
+                  <li><a href="index/DessertMilk.php" style="color: white">Milk</a></li>
+                  <li><a href="index/DessertFruit.php" style="color: white">Fruit</a></li>
+                  <li><a href="index/DessertChocolate.php" style="color: white">Chocolate</a></li>
+                  <li><a href="index/DessertJelly.php" style="color: white">Jelly</a></li>
+                  <li><a href="index/DessertYoghurt.php" style="color: white">Yoghurt</a></li>
+                  <li><a href="index/DessertBiscuit.php" style="color: white">Biscuit</a></li>
+                  <li><a href="index/DessertCheese.php" style="color: white">Cheese</a></li>
+                  <li><a href="index/DessertFlour.php" style="color: white">Flour</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item">Snack</a>
+                <ul>
+                  <li><a href="index/SnackMeat.php" style="color: white">Meat</a></li>
+                  <li><a href="index/SnackSeafood.php" style="color: white">Seafood</a></li>
+                  <li><a href="index/SnackMushroom.php" style="color: white">Mushroom</a></li>
+                  <li><a href="index/SnackVegetable.php" style="color: white">Vegetables</a></li>
+                  <li><a href="index/SnackEgg.php" style="color: white">Egg</a></li>
+                  <li><a href="index/SnackNoodles.php" style="color: white">Noodles</a></li>
+                  <li><a href="index/SnackTofu.php" style="color: white">Tofu</a></li>
+                  <li><a href="index/SnackChicken.php" style="color: white">Chicken Meat</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item">Traditional Food</a>
+                <ul>
+                  <li><a href="index/LocalMeat.php" style="color: white">Meat</a></li>
+                  <li><a href="index/LocalSeafood.php" style="color: white">Seafood</a></li>
+                  <li><a href="index/LocalMushroom.php" style="color: white">Mushroom</a></li>
+                  <li><a href="index/LocalVegetable.php" style="color: white">Vegetables</a></li>
+                  <li><a href="index/LocalEgg.php" style="color: white">Egg</a></li>
+                  <li><a href="index/LocalNoodles.php" style="color: white">Noodles</a></li>
+                  <li><a href="index/LocalTofu.php" style="color: white">Tofu</a></li>
+                  <li><a href="index/LocalChicken.php" style="color: white">Chicken Meat</a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item">International Food</a>
+                <ul>
+                  <li><a href="index/InternationalMeat.php" style="color: white">Meat</a></li>
+                  <li><a href="index/InternationalSeafood.php" style="color: white">Seafood</a></li>
+                  <li><a href="index/InternationalMushroom.php" style="color: white">Mushroom</a></li>
+                  <li><a href="index/InternationalVegetable.php" style="color: white">Vegetables</a></li>
+                  <li><a href="index/InternationalEgg.php" style="color: white">Egg</a></li>
+                  <li><a href="index/InternationalNoodles.php" style="color: white">Noodles</a></li>
+                  <li><a href="index/InternationalTofu.php" style="color: white">Tofu</a></li>
+                  <li><a href="index/InternationalChicken.php" style="color: white">Chicken Meat</a></li>
+                </ul>
+              </li>
+            </ul>
             </div>
         </div>
         <a href="profil.php" class="d-flex justify-content-end me-4 pe-2">
