@@ -414,7 +414,7 @@ include "../proses.php";
           </div>
             
       </div>
-        <a href="login.php" class="d-flex justify-content-end me-4 pe-2">login </a><p>or </p><a href="signup.html">Sign <Up></Up>
+        <a href="../login.php" class="d-flex justify-content-end me-4 pe-2">login </a><p>or </p><a href="signup.html">Sign <Up></Up>
           
       </div>
     </nav>

@@ -61,7 +61,7 @@ include "../proses.php";
         <div class="collapse navbar-collapse ms-4" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item me-2">
-              <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px">Recipe</a>
+              <a class="nav-link active" aria-current="page" href="../index.php" style="font-size: 20px">Recipe</a>
             </li>
             <li class="nav-item me-2">
               <a class="nav-link" href="../articles.html" style="color: white; font-size: 20px">Article</a>
@@ -307,7 +307,7 @@ include "../proses.php";
         <div class="collapse navbar-collapse ms-4" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item me-2">
-              <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px">Recipe</a>
+              <a class="nav-link active" aria-current="page" href="../index.php" style="font-size: 20px">Recipe</a>
             </li>
             <li class="nav-item me-2">
               <a class="nav-link" href="../articles.html" style="color: white; font-size: 20px">Article</a>
@@ -414,7 +414,7 @@ include "../proses.php";
           </div>
             
       </div>
-        <a href="login.php" class="d-flex justify-content-end me-4 pe-2">login </a><p>or </p><a href="signup.html">Sign <Up></Up>
+        <a href="../login.php" class="d-flex justify-content-end me-4 pe-2">login </a><p>or </p><a href="signup.html">Sign <Up></Up>
           
       </div>
     </nav>
