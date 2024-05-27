@@ -12,7 +12,7 @@
     }
 
     function ambilDataResep(){  //kalau di video namanya function getAllProducts, kayaknya gak bakal dipake
-        $tabel_recipesDetail1 = mysqli_query(koneksi(), "SELECT * FROM recipe_detail") or die (mysqli_error(koneksi()));
+        $tabel_recipesDetail1 = mysqli_query(koneksi(), "SELECT * FROM recipe_detail ORDER BY RAND()") or die (mysqli_error(koneksi()));
         while($row = mysqli_fetch_assoc($tabel_recipesDetail1)){
             $daftarResep[] = $row; //daftar resep = products
         }
